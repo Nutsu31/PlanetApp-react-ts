@@ -1,0 +1,31 @@
+.planetStatName{
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 16px;
+    letter-spacing: 0.727273px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+.planetStatDiv{
+    width: 100%;
+    height: fit-content;
+    padding: 0 24px;
+}
+@media(min-width:570px){
+    .planetStatDiv{
+        padding: 0 64px;
+    }
+}
+
+@media(min-width:768px){
+    .planetStatDiv{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 46px;
+    }
+}
