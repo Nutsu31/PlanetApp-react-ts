@@ -16,7 +16,12 @@ const Navbar = () => {
         <Logo>{logoText}</Logo>
       </div>
 
-      <MobileBarMenu pathname={pathname} miniBar={miniBar}>
+      <MobileBarMenu
+        pathname={pathname}
+        miniBar={miniBar}
+        onFocus={() => setMiniBar(true)}
+        onBlur={() => setMiniBar(false)}
+      >
         {miniBar ? (
           <div className={Styles.closeBtnCircle}>
             <h1 className={Styles.closeBtn} onClick={() => setMiniBar(false)}>
@@ -26,7 +31,11 @@ const Navbar = () => {
         ) : null}
         {PLANETS.map((planet) => {
           return (
-            <ColoredDiv pathname={pathname} name={planet.name}>
+            <ColoredDiv
+              pathname={pathname}
+              name={planet.name}
+              key={planet.name}
+            >
               <Link className={Styles.link} key={planet.name} to={planet.name}>
                 {planet.name}
               </Link>
