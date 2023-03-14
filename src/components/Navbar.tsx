@@ -16,12 +16,7 @@ const Navbar = () => {
         <Logo>{logoText}</Logo>
       </div>
 
-      <MobileBarMenu
-        pathname={pathname}
-        miniBar={miniBar}
-        onFocus={() => setMiniBar(true)}
-        onBlur={() => setMiniBar(false)}
-      >
+      <MobileBarMenu pathname={pathname} miniBar={miniBar}>
         {miniBar ? (
           <div className={Styles.closeBtnCircle}>
             <h1 className={Styles.closeBtn} onClick={() => setMiniBar(false)}>
